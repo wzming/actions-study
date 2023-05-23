@@ -38,3 +38,4 @@ jobs:
           echo test, and deploy your project.
           echo $.env:TEST_SECRET
           echo "$.env:TEST_SECRET"
+          echo ${{secrets.TEST_SECRET}}
