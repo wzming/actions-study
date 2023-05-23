@@ -40,5 +40,5 @@ jobs:
           echo ${{secrets.TEST_SECRET}}
       - name: 打印变量
         run: |
-          echo ${{TEST_VARIABLE}}
           echo ${{vars.TEST_VARIABLE}}
+          echo ${{env.TEST_VARIABLE}}
