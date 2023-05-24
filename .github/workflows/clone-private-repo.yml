@@ -30,6 +30,6 @@ jobs:
 
       - name: Clone code
         run: |
-          git clone --depth 1 https://github.com/wzming/router-setting.git 
+          git clone --depth 1 git@github.com:wzming/router-setting.git
           cd router-setting
           cat README.md
