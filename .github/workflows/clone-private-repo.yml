@@ -22,9 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.TEST_PULL_KEY }}
 
-      - name: clone
+      - name: Clone code
         run: |
-          git clone --depth 1 https://${{secrets.TEST_PULL_KEY}}@github.com/wzming/router-setting.git 
+          git clone --depth 1 https://github.com/wzming/router-setting.git 
           cd router-setting
           cat README.md
