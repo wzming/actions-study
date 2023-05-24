@@ -26,6 +26,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.TEST_PULL_KEY }}
+          known_hosts: unnecessary
 
       - name: Clone code
         run: |
